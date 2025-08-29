@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="100%" height="100%" fill="#0b1020"/>
+  <g fill="none" stroke="#a07cff" stroke-width="6" stroke-linecap="round">
+    <circle cx="100" cy="110" r="50" fill="rgba(255,255,255,0.05)" stroke="#7c9cff"/>
+    <path d="M65 75 L85 55 L90 80" />
+    <path d="M135 75 L115 55 L110 80" />
+    <circle cx="85" cy="110" r="6" fill="#fff" stroke="none"/>
+    <circle cx="115" cy="110" r="6" fill="#fff" stroke="none"/>
+    <path d="M95 130 Q100 137 105 130" />
+    <path d="M80 120 Q60 120 55 110" />
+    <path d="M120 120 Q140 120 145 110" />
+  </g>
+  <text x="50%" y="185" fill="#e8ecf1" font-family="Inter, Arial" font-size="16" text-anchor="middle">Cat</text>
+</svg>

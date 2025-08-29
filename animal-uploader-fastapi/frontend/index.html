@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Animal Picker + File Uploader</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css"/>
+  <script defer src="/assets/app.js"></script>
+</head>
+<body>
+  <noscript>
+    <div class="nojs">This page needs JavaScript enabled.</div>
+  </noscript>
+
+  <main class="container" role="main">
+    <header class="header">
+      <h1>🐾 Animal Picker + File Uploader</h1>
+      <p class="sub">Pick an animal to see a picture, or upload a file to inspect its details. Powered by FastAPI.</p>
+    </header>
+
+    <section class="grid">
+      <!-- Box 1: Animal selector -->
+      <article class="card" aria-labelledby="animal-title">
+        <div class="card-header">
+          <h2 id="animal-title">Choose an animal</h2>
+          <p class="hint">Select exactly one:</p>
+        </div>
+
+        <form id="animal-form" class="animal-form" aria-describedby="animal-help">
+          <div class="check-row">
+            <label class="check">
+              <input type="checkbox" name="animal" value="cat" /> <span>Cat</span>
+            </label>
+            <label class="check">
+              <input type="checkbox" name="animal" value="dog" /> <span>Dog</span>
+            </label>
+            <label class="check">
+              <input type="checkbox" name="animal" value="elephant" /> <span>Elephant</span>
+            </label>
+          </div>
+          <p id="animal-help" class="assistive">Selecting another option will uncheck the current one.</p>
+        </form>
+
+        <div id="animal-preview" class="preview" aria-live="polite" aria-busy="false">
+          <div class="placeholder">No animal selected yet.</div>
+        </div>
+      </article>
+
+      <!-- Box 2: File uploader -->
+      <article class="card" aria-labelledby="upload-title">
+        <div class="card-header">
+          <h2 id="upload-title">Upload a file</h2>
+          <p class="hint">Drag & drop or click to choose</p>
+        </div>
+
+        <div id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="File dropzone">
+          <svg class="dz-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M19 15a4 4 0 0 0-3.8-4 5 5 0 0 0-9.2 1.6A3.5 3.5 0 0 0 6.5 19H19a3 3 0 0 0 0-6zM12 8l3 3h-2v4h-2v-4H9l3-3z"></path>
+          </svg>
+          <p>Drop file here or <span class="link">browse</span></p>
+          <input id="file-input" type="file" hidden>
+        </div>
+
+        <div id="file-info" class="file-info" aria-live="polite" aria-busy="false"></div>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <small>Built for learning • FastAPI + Vanilla JS • <span id="health-status" class="tag">checking server…</span></small>
+    </footer>
+  </main>
+</body>
+</html>
